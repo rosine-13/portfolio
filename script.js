@@ -1,119 +1,109 @@
 // =========================
-// Effet Machine à écrire
+// Menu mobile (burger)
 // =========================
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
 
-const texts = [
-    "Développeuse Web",
-    "Data Analyst Junior",
-    "Passionnée par l'Intelligence Artificielle",
-    "Créatrice de solutions numériques"
-];
+if (menuBtn && navLinks) {
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
 
-let index = 0;
-let letter = 0;
-let currentText = "";
-let isDeleting = false;
-
-const typing = document.getElementById("typing");
-
-function type() {
-
-    currentText = texts[index];
-
-    if(!isDeleting){
-
-        typing.textContent = currentText.substring(0, letter++);
-
-        if(letter > currentText.length){
-
-            isDeleting = true;
-
-            setTimeout(type,1500);
-
-            return;
-        }
-
-    }else{
-
-        typing.textContent = currentText.substring(0, letter--);
-
-        if(letter < 0){
-
-            isDeleting = false;
-
-            index++;
-
-            if(index >= texts.length){
-
-                index = 0;
-
-            }
-
-        }
-
-    }
-
-    setTimeout(type,100);
-
+    // Ferme le menu quand on clique sur un lien
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+    });
 }
-
-type();
 
 // =========================
 // Bouton Retour en haut
 // =========================
-
 const topBtn = document.getElementById("topBtn");
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        topBtn.classList.add("show");
+    } else {
+        topBtn.classList.remove("show");
+    }
+});
 
-if(window.scrollY > 300){
+topBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
 
-topBtn.style.display="block";
+// =========================
+// Compteurs animés (chiffres clés)
+// =========================
+const statNumbers = document.querySelectorAll(".stat-number");
 
-}else{
+const animateCounter = (el) => {
+    const target = parseInt(el.getAttribute("data-target"), 10);
+    let current = 0;
+    const duration = 1500;      // durée totale en ms
+    const stepTime = 30;        // une mise à jour toutes les 30ms
+    const totalSteps = duration / stepTime;
+    const increment = target / totalSteps;
 
-topBtn.style.display="none";
+    const update = () => {
+        current += increment;
+        if (current < target) {
+            el.textContent = Math.floor(current);
+            setTimeout(update, stepTime);
+        } else {
+            el.textContent = target;
+        }
+    };
 
+    update();
+};
+
+// Lancer l'animation quand la section devient visible
+if (statNumbers.length > 0) {
+    const statsSection = document.querySelector(".stats");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                statNumbers.forEach(num => animateCounter(num));
+                observer.unobserve(entry.target);   // une seule fois
+            }
+        });
+    }, { threshold: 0.2 });
+
+    if (statsSection) {
+        observer.observe(statsSection);
+    } else {
+        // Fallback : si la section n'est pas trouvée, on anime direct
+        statNumbers.forEach(num => animateCounter(num));
+    }
 }
-
-});
-
-topBtn.addEventListener("click",()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-});
 
 // =========================
 // Envoi de formulaire EmailJS
 // =========================
-
-// Initialisation de la clé publique
 emailjs.init("Jp66gG16NNAkkgBSA");
 
 const form = document.getElementById("contact-form");
 
 if (form) {
-  form.addEventListener("submit", function(event) {
-    event.preventDefault();
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    // Remplacer par tes identifiants EmailJS
-    const serviceID = "service_62zjpng";
-    const templateID = "template_0cmlfg9";
+        const serviceID = "service_62zjpng";
+        const templateID = "template_0cmlfg9";
 
-    emailjs.sendForm(serviceID, templateID, this)
-      .then(() => {
-        alert("Votre message a bien été envoyé !");
-        form.reset();
-      }, (error) => {
-        alert("Erreur lors de l'envoi : " + JSON.stringify(error));
-      });
-  });
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                alert("Votre message a bien été envoyé !");
+                form.reset();
+            }, (error) => {
+                alert("Erreur lors de l'envoi : " + JSON.stringify(error));
+            });
+    });
 }
