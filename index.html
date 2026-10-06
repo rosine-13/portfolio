@@ -2,38 +2,31 @@
 <html lang="fr">
 
 <head>
-    <!-- Méta-informations de base pour l'encodage et l'affichage mobile -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMOSSI KOSSIA ROSINE | Portfolio</title>
 
-    <!-- Description SEO du site -->
     <meta name="description"
-        content="Portfolio de AMOSSI KOSSIA ROSINE - Développeuse Web, Stagiaire Data & IA.">
+        content="Portfolio de AMOSSI KOSSIA ROSINE - Développeuse Full-Stack & Data Analyst Junior.">
 
-    <!-- Police d'écriture Google Font (Poppins) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-    <!-- Icônes Font Awesome pour le style visuel -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- Fichier CSS principal -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <!-- =======================
-        HEADER (BARRE DE NAVIGATION)
+        HEADER
 ======================== -->
 <header>
     <nav class="navbar">
-        <!-- Logo de navigation mis à jour -->
         <a href="#" class="logo">
-            Rosine AMOSSI<span></span>
+            Kossia Rosine AMOSSI<span></span>
         </a>
 
-        <!-- Liens de navigation ancrés vers chaque section de la page -->
         <ul class="nav-links">
             <li><a href="#home">Accueil</a></li>
             <li><a href="#about">À propos</a></li>
@@ -41,10 +34,10 @@
             <li><a href="#projects">Projets</a></li>
             <li><a href="#timeline">Parcours</a></li>
             <li><a href="#certifications">Certifications</a></li>
+        
             <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <!-- Bouton Menu burger pour le format mobile -->
         <div class="menu-btn">
             <i class="fa-solid fa-bars"></i>
         </div>
@@ -52,17 +45,20 @@
 </header>
 
 <!-- =======================
-        HERO (SECTION D'ACCUEIL)
+        HERO
 ======================== -->
 <section id="home" class="hero">
 
     <div class="hero-text">
         <h1>
-            Je suis <span>AMOSSI KOSSIA ROSINE</span>
+            <span>Développeuse Full-Stack & Data Analyst Junior</span>
         </h1>
 
-        <!-- Balise dynamique ciblée par le script JS pour l'effet de frappe -->
-        <h2 id="typing"></h2>
+        <!-- 🟢 Badge disponibilité -->
+        <div class="availability-badge">
+            <span class="pulse-dot"></span>
+            Disponible pour un stage • 2026
+        </div>
 
         <p class="description">
             Stagiaire Développeuse Data & IA et diplômée d'un BTS en Développement d'Applications.
@@ -71,13 +67,15 @@
 
         <div class="hero-buttons">
             <a href="#projects" class="btn">Voir mes projets</a>
-            <a href="cv/Mon_cv.pdf" class="btn btn-outline" download>Télécharger mon CV</a>
+            <a href="cv/AMOSSI_KOSSIA_ROSINE_CV_DEV_DATA_ANALYST-.pdf" class="btn btn-outline" download>Télécharger mon CV</a>
         </div>
 
-        <!-- Réseaux sociaux : Uniquement LinkedIn et Email -->
         <div class="social-icons">
-            <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/kossia-rosine-amossi-7992b3330/" target="_blank" rel="noopener" title="LinkedIn">
                 <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/rosine-13" target="_blank" rel="noopener" title="GitHub">
+                <i class="fab fa-github"></i>
             </a>
             <a href="mailto:rosineamossi@gmail.com" title="Envoyer un email">
                 <i class="fas fa-envelope"></i>
@@ -85,33 +83,35 @@
         </div>
     </div>
 
-    <!-- Image d'accueil avec cartes flottantes des domaines d'expertise -->
     <div class="hero-image">
-        <img src="images/photo.png" alt="Photo de AMOSSI KOSSIA ROSINE">
-
-        <!-- Carte 1 : Développeuse Web -->
-        <div class="floating-card card1">
-            <i class="fa-solid fa-code"></i>
-            <div>
-                <h4>Développement Web</h4>
-                <p>HTML • CSS • JS • PHP • FastAPI</p>
-            </div>
-        </div>
-
-        <!-- Carte 2 : Data & IA -->
-        <div class="floating-card card2">
-            <i class="fa-solid fa-brain"></i>
-            <div>
-                <h4>Data & IA</h4>
-                <p>Python • SQL • RAG • Power BI</p>
-            </div>
-        </div>
+        <img src="images/rosine-hero.jpeg" alt="Photo de AMOSSI KOSSIA ROSINE">
     </div>
 
 </section>
 
 <!-- =======================
-        À PROPOS DE MOI
+        CHIFFRES CLÉS
+======================== -->
+<section id="stats" class="stats">
+    <div class="stats-container">
+
+        <div class="stat-item">
+            <i class="fa-solid fa-diagram-project"></i>
+            <h3 class="stat-number" data-target="5">0</h3>
+            <p>Projets réalisés</p>
+        </div>
+
+        <div class="stat-item">
+            <i class="fa-solid fa-certificate"></i>
+            <h3 class="stat-number" data-target="3">0</h3>
+            <p>Certifications obtenues</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- =======================
+        À PROPOS
 ======================== -->
 <section id="about" class="about">
 
@@ -123,22 +123,38 @@
     <div class="about-container">
 
         <div class="about-image">
-            <img src="images/ma.png" alt="Rosine Kossia Amossi">
+            <img src="images/rosine-about.png" alt="Rosine Kossia Amossi">
         </div>
 
         <div class="about-content">
-            <h3>Stagiaire Développeuse Data & IA</h3>
+            <h3>Développeuse Full-Stack & Data Analyst Junior</h3>
 
             <p>
-                Diplômée d'un BTS en Informatique (Développeur d'Applications), je suis actuellement Stagiaire Développeuse Data & IA chez Simplon Côte d'Ivoire.
-                Spécialisée dans la conception d'agents conversationnels autonomes (LLM, RAG), l'analyse de données avec Power BI et Python, et l'automatisation de workflows (n8n, FastAPI).
+                Titulaire d'un <strong>BTS Informatique (Développeur d'Applications)</strong> et actuellement en
+                formation <strong>Data & Intelligence Artificielle chez Simplon Côte d'Ivoire</strong>, je suis
+                passionnée par la création de solutions numériques intelligentes qui allient <strong>développement web</strong>,
+                <strong>analyse de données</strong> et <strong>intégration d'IA</strong>.
             </p>
 
             <p>
-                Rigoureuse, curieuse et motivée, mon objectif est de concevoir des solutions numériques et intelligentes adaptées à des besoins réels.
+                J'ai réalisé <strong>5 projets concrets</strong> allant d'une plateforme de recrutement intelligent
+                (<em>CVMatch IA</em>) à une application mobile de mise en relation (<em>Chat&Go</em>), en passant par
+                des dashboards décisionnels (<em>AlcoVision</em>) et des agents conversationnels basés sur des
+                architectures RAG (<em>IvoireExplorerIA</em>).
             </p>
 
-            <!-- Grille d'informations clés -->
+            <p>
+                Certifiée <strong>IBM</strong> (Python for Data Science), <strong>Sorbonne Université</strong>
+                (Data Literacy) et <strong>Duke University</strong> (Data Science Math Skills), je maîtrise un large
+                éventail d'outils : <strong>Python, SQL, Power BI, PHP, FastAPI, Flutter, Git</strong> et bien plus.
+            </p>
+
+            <p>
+                🎯 <strong>Disponible pour un stage</strong> : rigoureuse, curieuse et autonome, je suis prête à
+                m'investir pleinement dans des projets à fort impact et à contribuer à votre équipe tout en
+                développant mes compétences.
+            </p>
+
             <div class="about-info">
                 <div class="info-box">
                     <h4>Nom complet</h4>
@@ -179,7 +195,6 @@
 
     <div class="skills-grid">
 
-        <!-- Carte 1 : Front-end & Back-end Web -->
         <div class="skill-card">
             <div class="skill-header">
                 <i class="fa-solid fa-code"></i>
@@ -195,7 +210,6 @@
             </div>
         </div>
 
-        <!-- Carte 2 : Data Analytics & IA -->
         <div class="skill-card">
             <div class="skill-header">
                 <i class="fa-solid fa-brain"></i>
@@ -210,7 +224,6 @@
             </div>
         </div>
 
-        <!-- Carte 3 : Outils, Environnements & Atouts -->
         <div class="skill-card">
             <div class="skill-header">
                 <i class="fa-solid fa-layer-group"></i>
@@ -240,44 +253,120 @@
 
     <div class="projects-container">
 
-        <!-- Projet 1 : Microfinance -->
+        <!-- Projet 1 : CVMatch IA -->
         <div class="project-card">
-            <div class="project-img-wrapper">
-                <img src="images/Image1.png" alt="Gestion de Microfinance">
+            <div class="project-video">
+                <video controls preload="metadata" poster="images/cvmatch.png">
+                    <source src="videos/cvmatch.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture vidéo.
+                </video>
             </div>
             <div class="project-content">
-                <h3>Gestion de Microfinance</h3>
+                <h3>CVMatch IA — Recrutement intelligent</h3>
                 <p>
-                    Application web développée pour gérer les clients, les comptes, les agences et les opérations financières (dépôts, retraits, mouvements) d'une institution financière.
+                    Plateforme full-stack qui automatise le tri des candidatures grâce à l'IA : analyse sémantique des CV, score de pertinence, matching intelligent par offre d'emploi et recherche en langage naturel.
                 </p>
-                
+
                 <div class="project-tech-wrapper">
                     <span class="tech-label">Technologies :</span>
                     <div class="project-tech">
-                        <span>WebDev</span>
-                        <span>WLangage</span>
-                        <span>HFSQL</span>
-                        <span>Merise</span>
+                        <span>PHP 8</span>
+                        <span>Python (Flask)</span>
+                        <span>MySQL</span>
+                        <span>Groq API (LLM)</span>
+                        <span>pdfplumber</span>
                     </div>
                 </div>
 
                 <div class="project-buttons">
-                    <a href="https://drive.google.com/file/d/1cjAfKJ5umXymdy0tPB7K60LIAZQUqg_d/view?usp=drive_link" class="btn" target="_blank">Voir la démo</a>
+                    <a href="https://github.com/rosine-13/cvmatch-ia"
+                       class="btn btn-outline" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-github"></i> Code source
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- Projet 2 : Agent IA Touristique -->
-        <div class="project-card">
-            <div class="project-img-wrapper">
-                <img src="images/agentIA.jpeg" alt="Agent IA Touristique">
+        <!-- Projet 2 : Chat&Go (application mobile) -->
+        <div class="project-card project-card--mobile">
+            <div class="project-video">
+                <video controls preload="metadata" poster="images/chatandgo.png">
+                    <source src="videos/demo_chatgo.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture vidéo.
+                </video>
             </div>
             <div class="project-content">
-                <h3>Agent IA Touristique (IvoirGuide)</h3>
+                <h3>Chat&amp;Go — Mise en relation de services</h3>
+                <p>
+                    Application mobile de mise en relation entre utilisateurs et prestataires via une interface conversationnelle inspirée de WhatsApp.
+                </p>
+
+                <div class="project-tech-wrapper">
+                    <span class="tech-label">Technologies :</span>
+                    <div class="project-tech">
+                        <span>Flutter</span>
+                        <span>Python (FastAPI)</span>
+                        <span>SQLite</span>
+                        <span>LLM (DeepSeek)</span>
+                    </div>
+                </div>
+
+                <div class="project-buttons">
+                    <a href="https://github.com/rosine-13/Chat-Go"
+                       class="btn btn-outline" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-github"></i> Code source
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 3 : AlcoVision -->
+        <div class="project-card">
+            <div class="project-video">
+                <video controls preload="metadata" poster="images/alcovision.png">
+                    <source src="videos/demo__PowerBi.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture vidéo.
+                </video>
+            </div>
+            <div class="project-content">
+                <h3>AlcoVision — Dashboard mondial</h3>
+                <p>
+                    Tableau de bord interactif analysant les tendances mondiales de consommation d'alcool (OMS, 188 pays, 2000–2022) avec KPI dynamiques, carte interactive et classement par région.
+                </p>
+
+                <div class="project-tech-wrapper">
+                    <span class="tech-label">Technologies :</span>
+                    <div class="project-tech">
+                        <span>Power BI</span>
+                        <span>Power Query (M)</span>
+                        <span>DAX</span>
+                        <span>CSV (OMS)</span>
+                    </div>
+                </div>
+
+                <div class="project-buttons">
+                    <a href="https://drive.google.com/file/d/1rVkxINZsG0GlCjrdrMdDOhW1Dse-HqEy/view?usp=sharing"
+                       class="btn btn-outline" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-google-drive"></i> Voir sur Drive
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 4 : Agent IA Touristique -->
+        <div class="project-card">
+            <div class="project-video">
+                <video controls preload="metadata" poster="images/agentIA.jpeg">
+                    <source src="videos/demo_agentIA.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture vidéo.
+                </video>
+            </div>
+            <div class="project-content">
+                <h3>Agent IA Touristique (IvoireExplorerIA)</h3>
                 <p>
                     Assistant intelligent sur Telegram répondant en temps réel aux questions touristiques sur la Côte d'Ivoire à l'aide d'architectures RAG et de workflows automatisés.
                 </p>
-                
+
                 <div class="project-tech-wrapper">
                     <span class="tech-label">Technologies :</span>
                     <div class="project-tech">
@@ -289,33 +378,43 @@
                 </div>
 
                 <div class="project-buttons">
-                    <a href="https://drive.google.com/file/d/182uAIhHqE_AvZM-EPNpdorxByZe_4oU2/view?usp=sharing" class="btn" target="_blank">Voir la démo</a>
+                    <a href="https://drive.google.com/file/d/1C0YF0YPC1LCieD47OtFjgf7Gbfd8oTYD/view?usp=sharing"
+                       class="btn btn-outline" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-google-drive"></i> Voir sur Drive
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- Projet 3 : Dashboard Data -->
+        <!-- Projet 5 : Microfinance -->
         <div class="project-card">
-            <div class="project-img-wrapper">
-                <img src="images/dashboard.png" alt="Dashboard Data Analytics">
+            <div class="project-video">
+                <video controls preload="metadata" poster="images/Image1.png">
+                    <source src="videos/gestion_microfinance_tuto.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture vidéo.
+                </video>
             </div>
             <div class="project-content">
-                <h3>Dashboard Data Analytics</h3>
+                <h3>Gestion de Microfinance</h3>
                 <p>
-                    Tableau de bord décisionnel interactif permettant de visualiser, nettoyer et analyser des données stratégiques avec des KPIs dynamiques.
+                    Application web développée pour gérer les clients, les comptes, les agences et les opérations financières (dépôts, retraits, mouvements) d'une institution financière.
                 </p>
 
                 <div class="project-tech-wrapper">
                     <span class="tech-label">Technologies :</span>
                     <div class="project-tech">
-                        <span>Power BI</span>
-                        <span>Python (Pandas)</span>
-                        <span>SQL</span>
+                        <span>WebDev</span>
+                        <span>WLangage</span>
+                        <span>HFSQL</span>
+                        <span>Merise</span>
                     </div>
                 </div>
 
                 <div class="project-buttons">
-                    <a href="https://drive.google.com/file/d/1kKlwI-R_jImY7vAo78pINl0ogSHtaceN/view?usp=sharing" class="btn" target="_blank">Voir la démo</a>
+                    <a href="https://drive.google.com/file/d/1cjAfKJ5umXymdy0tPB7K60LIAZQUqg_d/view?usp=sharing"
+                       class="btn btn-outline" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-google-drive"></i> Voir sur Drive
+                    </a>
                 </div>
             </div>
         </div>
@@ -325,7 +424,7 @@
 </section>
 
 <!-- =======================
-        PARCOURS (TIMELINE)
+        PARCOURS
 ======================== -->
 <section id="timeline" class="timeline">
 
@@ -336,28 +435,33 @@
 
     <div class="timeline-container">
 
-        <!-- Expérience chez Simplon -->
         <div class="timeline-item">
-            <h3>Fév. 2026 - Nov. 2026</h3>
-            <h4>Stagiaire Développeuse DATA IA</h4>
-            <p><strong>Simplon Côte d'Ivoire (Abidjan)</strong> — Conception d'agents conversationnels (LLM, RAG), automatisation de workflows (n8n), microservices FastAPI/PHP et création de dashboards Power BI.</p>
-        </div>
+    <h3>Fév. 2026 - Nov. 2026</h3>
+    <h4>Stagiaire Développeuse DATA & IA</h4>
+    <p>
+        <strong>Simplon Côte d'Ivoire (Abidjan)</strong> — Formation intensive et mise en pratique sur
+        des projets réels alliant <strong>Data, IA et développement full-stack</strong> :
+    </p>
+    <ul class="timeline-list">
+        <li><strong>Chat&Go</strong> — Application mobile de mise en relation de services développée avec <em>Flutter</em>, <em>FastAPI</em> et intégration d'un LLM (DeepSeek).</li>
+        <li><strong>CVMatch IA</strong> — Plateforme de recrutement intelligent avec analyse sémantique des CV par IA (<em>PHP, Python Flask, MySQL, Groq API</em>).</li>
+        <li><strong>AlcoVision</strong> — Dashboard mondial interactif de la consommation d'alcool (<em>Power BI, Power Query, DAX</em>).</li>
+        <li><strong>IvoireExplorerIA</strong> — Agent conversationnel touristique basé sur une architecture <em>RAG</em> et des workflows <em>n8n</em>.</li>
+    </ul>
+</div>
 
-        <!-- Expérience chez ACCESS INFORMATIQUE -->
         <div class="timeline-item">
             <h3>Juil. 2025 - Oct. 2025</h3>
             <h4>Stagiaire Développeuse d'applications</h4>
             <p><strong>ACCESS INFORMATIQUE (Yopougon)</strong> — Développement complet d'une application de gestion de microfinance sous WebDev et HFSQL.</p>
         </div>
 
-        <!-- Diplôme BTS -->
         <div class="timeline-item">
             <h3>Nov. 2023 - Août 2024</h3>
             <h4>BTS Informatique (Développeur d'Applications)</h4>
             <p><strong>Institut Supérieur Jean Paul II (Groupe Loko)</strong> — Algorithmique, bases de données MySQL, langages C, HTML/CSS, JS, PHP et Windev.</p>
         </div>
 
-        <!-- Baccalauréat -->
         <div class="timeline-item">
             <h3>Sept. 2021 - Juil. 2022</h3>
             <h4>Baccalauréat Série D</h4>
@@ -375,26 +479,23 @@
 
     <div class="section-title">
         <h2>Certifications</h2>
-        <span>Mes certifications obtenus</span>
+        <span>Mes certifications obtenues</span>
     </div>
 
     <div class="certifications-grid">
 
-        <!-- Certification 1 : IBM -->
         <div class="certificate-card">
             <i class="fa-solid fa-award"></i>
             <h3>IBM Python 101 for Data Science</h3>
             <p>IBM SkillsBuild (Juin 2026)</p>
         </div>
 
-        <!-- Certification 2 : Sorbonne -->
         <div class="certificate-card">
             <i class="fa-solid fa-certificate"></i>
             <h3>Data Literacy</h3>
             <p>Sorbonne Université & Coursera (Août 2025)</p>
         </div>
 
-        <!-- Certification 3 : Duke University -->
         <div class="certificate-card">
             <i class="fa-solid fa-graduation-cap"></i>
             <h3>Data Science Math Skills</h3>
@@ -403,6 +504,100 @@
 
     </div>
 
+</section>
+
+
+<!-- =======================
+        MÉTHODE DE TRAVAIL
+======================== -->
+<section id="method" class="method">
+
+    <div class="section-title">
+        <h2>Ma méthode de travail</h2>
+        <span>Comment je conçois mes projets</span>
+    </div>
+
+    <div class="method-container">
+
+        <div class="method-step">
+            <div class="method-number">01</div>
+            <i class="fa-solid fa-lightbulb"></i>
+            <h3>Comprendre le besoin</h3>
+            <p>
+                Avant de coder, je prends le temps d'<strong>analyser le problème</strong>, d'identifier les
+                utilisateurs cibles et de clarifier les objectifs. Cette étape évite les malentendus et pose
+                des bases solides.
+            </p>
+        </div>
+
+        <div class="method-step">
+            <div class="method-number">02</div>
+            <i class="fa-solid fa-pen-ruler"></i>
+            <h3>Concevoir & modéliser</h3>
+            <p>
+                Je conçois l'<strong>architecture technique</strong> (base de données, API, interface) en
+                m'appuyant sur des méthodes comme <strong>Merise</strong> et des maquettes UX. J'aime poser
+                les choses avant de me lancer.
+            </p>
+        </div>
+
+        <div class="method-step">
+            <div class="method-number">03</div>
+            <i class="fa-solid fa-code"></i>
+            <h3>Développer par itérations</h3>
+            <p>
+                Je code par <strong>petites étapes testées</strong>, en privilégiant un code propre, commenté
+                et versionné avec <strong>Git</strong>. Chaque fonctionnalité est validée avant de passer à la suivante.
+            </p>
+        </div>
+
+        <div class="method-step">
+            <div class="method-number">04</div>
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Analyser & optimiser</h3>
+            <p>
+                Pour les projets Data & IA, j'explore les données, je les nettoie et je les visualise avec
+                <strong>Python, SQL et Power BI</strong>. Je mesure l'impact pour améliorer en continu.
+            </p>
+        </div>
+
+        <div class="method-step">
+            <div class="method-number">05</div>
+            <i class="fa-solid fa-rocket"></i>
+            <h3>Tester & livrer</h3>
+            <p>
+                Je teste chaque livrable (démo, documentation, cas limites) avant de le présenter. J'aime
+                livrer un travail <strong>fonctionnel, clair et utilisable</strong> dès la première version.
+            </p>
+        </div>
+
+        <div class="method-step">
+            <div class="method-number">06</div>
+            <i class="fa-solid fa-arrows-rotate"></i>
+            <h3>Apprendre & itérer</h3>
+            <p>
+                Je collecte les retours, je corrige et j'apprends de chaque projet. La <strong>curiosité</strong>
+                et la <strong>remise en question</strong> font partie intégrante de ma façon de travailler.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =======================
+        DISPONIBILITÉ
+======================== -->
+<section id="availability" class="availability">
+    <div class="availability-container">
+        <i class="fa-solid fa-briefcase"></i>
+        <h2>Je recherche un stage</h2>
+        <p>
+            Disponible pour un <strong>stage en Data, Intelligence Artificielle ou Développement Full-Stack</strong>
+            en Côte d'Ivoire ou à l'international.
+        </p>
+        <a href="#contact" class="btn">Me contacter</a>
+    </div>
 </section>
 
 <!-- =======================
@@ -415,14 +610,12 @@
         <span>Échangeons ensemble</span>
     </div>
 
-    <!-- Coordonnées directes affichées au-dessus du formulaire -->
-    <div class="contact-details" style="text-align: center; margin-bottom: 25px;">
+    <div class="contact-details">
         <p><i class="fas fa-envelope"></i> rosineamossi@gmail.com</p>
         <p><i class="fas fa-phone"></i> +225 0100483141</p>
         <p><i class="fas fa-location-dot"></i> Abidjan, Côte d'Ivoire</p>
     </div>
 
-    <!-- Formulaire couplé au script EmailJS -->
     <form id="contact-form">
         <input type="text" name="name" placeholder="Votre nom" required>
         <input type="email" name="email" placeholder="Votre email" required>
@@ -433,22 +626,18 @@
 </section>
 
 <!-- =======================
-        FOOTER (PIED DE PAGE)
+        FOOTER
 ======================== -->
 <footer>
     <h2>Rosine AMOSSI</h2>
     <p>© 2026 AMOSSI KOSSIA ROSINE - Tous droits réservés.</p>
 </footer>
 
-<!-- Bouton pour remonter tout en haut de la page -->
 <button id="topBtn" title="Retour en haut">
     <i class="fas fa-arrow-up"></i>
 </button>
 
-<!-- SDK EmailJS pour la gestion de l'envoi d'emails depuis le formulaire -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-<!-- Fichier JavaScript personnalisé -->
 <script src="script.js"></script>
 
 </body>
